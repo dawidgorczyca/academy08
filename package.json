@@ -1,0 +1,32 @@
+{
+  "name": "08",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/react": "^16.8.24",
+    "@types/react-dom": "^16.8.5",
+    "husky": "^3.0.2",
+    "parcel-bundler": "^1.12.3",
+    "prettier": "^1.18.2",
+    "typescript": "^3.5.3"
+  },
+  "dependencies": {
+    "components": "^0.1.0",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "sass": "^1.22.9"
+  },
+  "scripts": {
+    "dev": "parcel ./src/index.html",
+    "build": "parcel build index.html",
+    "prettify": "prettier --write \"./**/*.{ts,tsx}\""
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn run prettify"
+    }
+  }
+}
